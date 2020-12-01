@@ -39,7 +39,7 @@ jobs:
 
           ./configure.sh
 
-          bazelisk --output_base=C:/bazel_cache build :build_pip_pkg --copt=/arch:AVX --enable_runfiles --define=override_eigen_strong_inline=true
+          bazelisk --output_base=C:/bazel_cache build :build_pip_pkg --copt=/arch:AVX --enable_runfiles --define=override_eigen_strong_inline=true --discard_analysis_cache --nokeep_state_after_build --notrack_incremental_state
           bazel-bin/build_pip_pkg wheelhouse
 
         shell: bash
