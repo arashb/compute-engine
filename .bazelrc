@@ -79,6 +79,9 @@ build:windows --host_linkopt=/OPT:ICF
 build:windows --copt=/d2ReducedOptimizeHugeFunctions
 build:windows --host_copt=/d2ReducedOptimizeHugeFunctions
 
+build:windows --copt=/Zm50
+build:windows --host_copt=/Zm50
+
 # Verbose failure logs when something goes wrong
 build:windows --verbose_failures
 
